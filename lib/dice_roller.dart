@@ -5,11 +5,11 @@ class DiceRoller extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    return _DiceRolletState();
+    return _DiceRollerState();
   }
 }
 
-class _DiceRolletState extends State<DiceRoller> {
+class _DiceRollerState extends State<DiceRoller> {
   var activeDiceImage = 'assets/images/dice-1.png';
   
   void rollDice() {
