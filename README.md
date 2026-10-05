@@ -1,17 +1,51 @@
-# flutter_lab4_app
+# Лабораторная работа №4-5. Flutter: структура UI и компонентный подход
 
-A new Flutter project.
+**ФИО:** Куриев Артур Майрбекович
+**Группа:** ИСП-241
+**Дата:** 05.10.2026
 
-## Getting Started
+## Что изучил
 
-This project is a starting point for a Flutter application.
+* Создание интерфейса с помощью виджетов
+* Создание `StatelessWidget` и `StatefulWidget`
+* Разделение кода на несколько файлов
+* Передачу данных через параметры
+* Работу с изображениями и случайными числами
 
-A few resources to get you started if this is your first Flutter project:
+## Финальное приложение
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+![Roll Dice](./img/step6_Kuriev.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Репозиторий
+
+[Мой репозиторий на GitHub](https://github.com/APTYPMORGAN/Flutter_Widgets)
+
+## Как запустить проект
+
+1. Открыть папку проекта в VS Code
+2. Открыть терминал
+3. Выполнить команду: `flutter pub get`
+4. Запустить приложение: `flutter run -d chrome`
+
+## Ответы на вопросы
+
+### 1. Зачем выносить виджеты в отдельные файлы?
+
+Так код становится более понятным и удобным.
+Если всё хранить в `main.dart`, файл быстро станет большим и в нём будет сложнее искать нужный код
+
+### 2. Что такое BuildContext?
+
+`BuildContext` содержит информацию о месте виджета в дереве Flutter
+Он нужен методу `build()` для правильного построения интерфейса
+
+### 3. Чем StatelessWidget отличается от StatefulWidget?
+
+`StatelessWidget` используется для виджетов, которые не меняются.
+
+`StatefulWidget` используется, когда данные на экране могут изменяться.
+
+### 4. Почему Random() создаётся на уровне файла?
+
+Чтобы не создавать новый генератор случайных чисел при каждом нажатии кнопки
+Один объект `Random` можно использовать несколько раз
